@@ -22,8 +22,8 @@
                                :type "text/html")]
       (is (= "text/html" (content-type m)) "content type should be text/html")
       (is (= msg-body (body m)) "body should be equal to the defined one")))
-  (testing "Multipart alternative body"
 
+  (testing "Multipart alternative body"
     (let [msg-body-lr "body"
           msg-body-hr "<html><body>Body</body></html>"
           m (make-alternative-email "from@example.org"
